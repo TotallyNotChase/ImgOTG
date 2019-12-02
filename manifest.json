@@ -1,0 +1,18 @@
+{
+  "name": "Web_Rotator",
+  "version": "1.0",
+  "description": "An extension to rotate images on a tab on the fly!",
+  "permissions": [
+      "activeTab"
+    ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["main.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}
