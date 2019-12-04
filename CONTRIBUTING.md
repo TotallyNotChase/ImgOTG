@@ -7,12 +7,12 @@ Please note this repository has a code of conduct, please follow it in all your 
 
 Please head over to [Issues](https://github.com/TotallyNotChase/ImgOTG/issues) to check what you can contribute to!
 
-Also check out [Documentation](https://github.com/TotallyNotChase/ImgOTG/blob/master/DOCUMENTATION.md) for a walkthrough of how the extension works in general!
+Also check out [Documentation](https://github.com/TotallyNotChase/ImgOTG/blob/master/DOCS.md) for a walkthrough of how the extension works in general!
 
 ## Pull Request Guidelines
 
 1. Perform suitable tests prior to submitting PRs to ensure the extension is working correctly
-2. Update the [Documentation](https://github.com/TotallyNotChase/ImgOTG/blob/master/DOCUMENTATION.md) for any major changes
+2. Update the [Documentation](https://github.com/TotallyNotChase/ImgOTG/blob/master/DOCS.md) for any major changes
 3. Update any and all **version numbers** if applicable.
 
 ## Code of Conduct
