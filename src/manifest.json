@@ -1,7 +1,7 @@
 {
-  "name": "Web_Rotator",
+  "name": "ImgOTG",
   "version": "1.0",
-  "description": "An extension to rotate images on a tab on the fly!",
+  "description": "An extension to edit images on a tab on the fly!",
   "permissions": [
       "activeTab"
     ],
