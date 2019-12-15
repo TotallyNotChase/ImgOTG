@@ -2,36 +2,108 @@
 <html lang="en" dir="ltr">
   <style type="text/css">
     body {
-      width: 300px;
-      height: 400px;
+      width: 200px;
+      height: 300px;
+      background-color: #1b1b1b
     }
     .title {
-      font-size: 32px;
-      margin-left: 15px;
-      margin-right: 10px;
+      font-size: 20px;
+      margin-left: 5px;
+      margin-right: 5px;
+      text-align: center;
     }
     .rotators {
       position: fixed;
-      top: 55px;
+      top: 50px;
+      left: 10px;
       width: 100%;
     }
     .rotator_button {
       float: left;
+      display: inline-block;
+      background-color: #1852ad;
       font-size: 20px;
+      color: white;
       text-align: center;
       border-radius: 10px;
-      display: inline-block;
-      background-color: rgb(18, 68, 148);
+    }
+    .rotator_info {
+      position: relative;
+      top: 3px;
+      float: left;
+      background-color: #1852ad;
+      font-size: 20px;
+      padding: 2px;
+      color: white;
+      text-align: center;
+      border-style: inset;
+      border-color: black;
+      border-radius: 5px;
+      margin-left: 5px;
+      margin-right: 5px;
     }
     #rotate_clock {
-      position: fixed;
-      top: 56px;
-      right: 15px;
+      position: relative;
+      top: 5px;
     }
     #rotate_anticlock {
+      position: relative;
+      top: 5px;
+    }
+    .sliders {
       position: fixed;
-      top: 60px;
-      left: 10px;
+      top: 100px;
+      left: 20px;
+      width: 100%;
+    }
+    .slider_title {
+      display: inline-block;
+      position: relative;
+      left: -10px;
+      background-color: #1852ad;
+      font-size: 15px;
+      color: white;
+      padding: 5px;
+      border-style: ridge;
+      border-color: black;
+      border-radius: 5px;
+    }
+    .value_box {
+      display: inline-block;
+      position: relative;
+      right: 30px;
+      float: right;
+      background: transparent;
+      font-size: 15px;
+      color: white;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-style: inset;
+      border-color: white;
+      border-radius: 5px;
+    }
+    .slider_main {
+      -webkit-appearance: none;
+      appearance: none;
+      position: relative;
+      height: 5px;
+      width: 90%;
+      left: -10px;
+      outline: none;
+      border-radius: 10px;
+      background-color: #1852ad;
+    }
+
+  .slider_main::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: orange;
+      cursor: pointer;
     }
   </style>
   <head>
@@ -39,13 +111,31 @@
     <title>ImgOTG Control</title>
     <script src="popup.js" charset="utf-8"></script>
   </head>
-  <body background="images/background.jpg">
+  <body>
     <header class="title">
       <span style="color:orange;">Image</span>|<span style="color:purple;">On-The-Go!</span>
     </header>
     <div class="rotators">
       <button type="button" class="rotator_button" id="rotate_anticlock">↶</button>
+      <span class="rotator_info">Rotate Image</span>
       <button type="button" class="rotator_button" id="rotate_clock">↷</button>
+    </div>
+    <div class="sliders">
+      <div class="brightness_slider">
+        <span class="slider_title">Brightness:</span>
+        <span class="value_box" id="brightness_value">50</span>
+      </div>
+      <input type="range" class="slider_main" id="brightness_slider_main" min="0" max="100" value="50">
+      <div class="contrast_slider">
+        <span class="slider_title">Contrast:</span>
+        <span class="value_box" id="contrast_value">50</span>
+      </div>
+      <input type="range" class="slider_main" id="contrast_slider_main" min="0" max="100" value="50">
+      <div class="saturation_slider">
+        <span class="slider_title">Saturation:</span>
+        <span class="value_box" id="saturation_value">50</span>
+      </div>
+      <input type="range" class="slider_main" id="saturation_slider_main" min="0" max="100" value="50">
     </div>
   </body>
 </html>
